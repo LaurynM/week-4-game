@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Bartender Game</title>
+
+    <!-- Bootstrap -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body>
+    <h1>Let's Play the Bartender Game!</h1>
+    <p>It's Happy Hour! You have a never-ending stream of penny-pinching customers lined up at the bar. They each want as much booze as they can afford, but they won't go one penny over budget. Lucky for you, they don't care what's in the drink, and they tip well.</p>
+    <p>If you make a drink, and the price is equal to the budget, the customer will buy it and give you a tip. If you go over budget, the customer will refuse the drink, and the cost of the drink will come out of your tips for the night.</p>
+    <p>Be careful! The costs of the liquors change every round, so you will need to think on your feet!</p>
+    <p>Use any combination of the four unlabeled liquors below to make a drink. You won't know how much a liquor costs until you pour it.</p>
+    
+    <br>
+    <h4>Drink Order:</h4>
+    <p>"What can I get for $<span id="budget"></span>?"</p>
+
+    <h4>Current Bill:</h4>
+    <p id="bill"></p>
+    <p>Total:<span id="total"></span></p>
+
+    <img class="bottle" id="blue" src="assets/blue.jpg">
+    <img class="bottle" id="green" src="assets/green.jpg">
+    <img class="bottle" id="white" src="assets/white.jpg">
+    <img class="bottle" id="brown" src="assets/brown.jpg">
+
+    <p>Successful Drinks: <span id="win">0</span></p>
+    <p>Unsuccessful Drinks: <span id="lose">0</span></p>
+    <p>Tips for the Night: $<span id="tips">0</span></p>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script> 
+  </body>
+</html>
