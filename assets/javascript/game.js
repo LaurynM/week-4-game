@@ -40,7 +40,9 @@ $(document).ready(function(){
             $("#win").html(win);
             tips += 100; //add $100 tip
             $("#tips").html(tips);
-            $("#win-lose").html("<p>Thanks, I'll take it! Have a tip for making the perfect drink.</p>");
+            $("#win-lose").html("<p class='alert alert-success' role='alert'>Thanks, I'll take it! Have a tip for making the perfect drink.</p>");
+            //hide the bottles to stop game play
+            $(".bottle").hide();
             $("#next").show();//allow player to go to next customer
             // add a coin sound?
         }else if (total > target){ //Losing scenario
@@ -48,7 +50,9 @@ $(document).ready(function(){
             $("#lose").html(lose);
             tips -= total; //remove total cost of drink from tips
             $("#tips").html(tips);
-            $("#win-lose").html("<p>That's way too expensive! I won't pay it!</p>");
+            $("#win-lose").html("<p class='alert alert-danger' role='alert'>That's way too expensive! I won't pay it!</p>");
+            //hide the bottles to stop game play
+            $(".bottle").hide();
             $("#next").show();//allow player to go to next customer
             // add a vacuum/sucking/wind sound?
         }
@@ -72,7 +76,7 @@ var newCustomer = function(){
     target = Math.floor(Math.random() * 102) + 19;
     $("#budget").html(target);
     //reset the running total
-    var total = 0;
+    total = 0;
     $("#total").html(total);
     //clear the bill
     $("#bill").empty();
@@ -80,6 +84,8 @@ var newCustomer = function(){
     $("#win-lose").empty();
     //hide the next customer button
     $("#next").hide();
+    //show the bottles
+    $(".bottle").show();
 }
 
 $("#next").click(newCustomer);

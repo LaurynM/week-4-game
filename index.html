@@ -19,31 +19,44 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   <body>
-    <h1>Let's Play the Bartender Game!</h1>
-    <p>It's Happy Hour! You have a never-ending stream of penny-pinching customers lined up at the bar. They each want as much booze as they can afford, but they won't go one penny over budget. Lucky for you, they don't care what's in the drink, and they tip well.</p>
-    <p>If you make a drink, and the price is equal to the budget, the customer will buy it and give you a tip. If you go over budget, the customer will refuse the drink, and the cost of the drink will come out of your tips for the night.</p>
-    <p>Be careful! The costs of the liquors change every round, so you will need to think on your feet!</p>
-    <p>Use any combination of the four unlabeled liquors below to make a drink. You won't know how much a liquor costs until you pour it.</p>
+    <div class="container">
+        <div class="row">
+            <div class="instructions col-xs-12">
+                <h1>Let's Play the Bartender Game!</h1>
+                <p>It's Happy Hour! You have a never-ending stream of penny-pinching customers lined up at the bar. They each want as much booze as they can afford, but they won't go one penny over budget. Lucky for you, they don't care what's in the drink, and they tip well.</p>
+                <p>If you make a drink, and the price is equal to the budget, the customer will buy it and give you a tip. If you go over budget, the customer will refuse the drink, and the cost of the drink will come out of your tips for the night.</p>
+                <p>Be careful! The costs of the liquors change every round, so you will need to think on your feet!</p>
+                <p>Click any combination of the four unlabeled liquors below to make a drink. You won't know how much a liquor costs until you pour it.</p>
+            </div> <!-- end of instructions -->
+        </div> <!-- end of row -->
+        <div class="row">
+            <div class="gameplay col-md-6">
+                <h4>Drink Order:</h4>
+                <h4>"What can I get for $<span id="budget"></span>?"</h4>
+                <div id="win-lose"></div>
+                <button type='button' id='next'>Next Customer!</button>
+                <!-- <br><br><br> -->
+                <img class="bottle" id="blue" src="assets/blue.jpg">
+                <img class="bottle" id="green" src="assets/green.jpg">
+                <img class="bottle" id="white" src="assets/white.jpg">
+                <img class="bottle" id="brown" src="assets/brown.jpg">
+
+                <br>
+                <p>Successful Drinks: <span id="win"></span></p>
+                <p>Unsuccessful Drinks: <span id="lose"></span></p>
+                <p>Tips for the Night: $<span id="tips"></span></p>
+            </div> <!-- end of gameplay -->
+            <div class="receipt col-md-6">
+                <h4>Current Bill:</h4>
+                <p id="bill"></p>
+                <h4>Total: $<span id="total"></span></h4>
+            </div> <!-- end of receipt -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+
     
     <br>
-    <h4>Drink Order:</h4>
-    <p>"What can I get for $<span id="budget"></span>?"</p>
-    <div id="win-lose"></div>
-    <button type='button' id='next'>Next Customer!</button>
-    
-    <br>
-    <img class="bottle" id="blue" src="assets/blue.jpg">
-    <img class="bottle" id="green" src="assets/green.jpg">
-    <img class="bottle" id="white" src="assets/white.jpg">
-    <img class="bottle" id="brown" src="assets/brown.jpg">
 
-    <h4>Current Bill:</h4>
-    <p id="bill"></p>
-    <p>Total: $<span id="total"></span></p>
-
-    <p>Successful Drinks: <span id="win"></span></p>
-    <p>Unsuccessful Drinks: <span id="lose"></span></p>
-    <p>Tips for the Night: $<span id="tips"></span></p>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
